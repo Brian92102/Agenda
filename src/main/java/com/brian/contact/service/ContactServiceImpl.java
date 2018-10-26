@@ -29,6 +29,15 @@ public class ContactServiceImpl implements ContactService {
 	 public void removeContact(Integer id) {
 	 contactDAO.removeContact(id);
 	 }
+	 @Transactional
+	 public void updateContact(Contact contact) {
+		 contactDAO.updateContact(contact);
+	 }
+	 @Transactional
+	 public Contact getContactById(Integer id) {
+		 return contactDAO.getContactById(id);
+	 }
+	 
 	}
 	
 

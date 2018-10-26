@@ -28,19 +28,19 @@
 <table>
  <tr>
  <td><form:label path="firstname"><spring:message code="label.firstname"/></form:label></td>
- <td><form:input path="firstname" /></td> 
+ <td><form:input path="firstname" type="text" /></td> 
  </tr>
  <tr>
  <td><form:label path="lastname"><spring:message code="label.lastname"/></form:label></td>
- <td><form:input path="lastname" /></td>
+ <td><form:input path="lastname" type="text"/></td>
  </tr>
  <tr>
  <td><form:label path="email"><spring:message code="label.email"/></form:label></td>
- <td><form:input path="email" /></td>
+ <td><form:input path="email"  type="email"/></td>
  </tr>
  <tr>
  <td><form:label path="telephone"><spring:message code="label.telephone"/></form:label></td>
- <td><form:input path="telephone" /></td>
+ <td><form:input path="telephone" type="number"/></td>
  </tr>
  <tr>
  <td colspan="2">
@@ -67,6 +67,7 @@
  <td>${contact.email}</td>
  <td>${contact.telephone}</td>
  <td><a href="delete/${contact.id}">Eliminar</a></td>
+ <td><a href="edit/${contact.id}">Editar</a></td>
  </tr>
 </c:forEach>
 </table>

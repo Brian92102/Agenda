@@ -28,4 +28,18 @@ public void removeContact(Integer id) {
 	 sessionFactory.getCurrentSession().delete(contact);
 	 }
 }
+
+public Contact getContactById(Integer id) {
+	Contact contact = (Contact) sessionFactory.getCurrentSession().get(Contact.class, id);
+	return contact;
 }
+
+public void updateContact(Contact contact) {
+	sessionFactory.getCurrentSession().update(contact);
+
+	
+}
+}
+
+
+
